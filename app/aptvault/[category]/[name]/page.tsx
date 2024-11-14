@@ -183,7 +183,7 @@ const AptPage = () => {
                   className="rounded-full"
                 />
                 <h2 className="text-lg font-semibold mt-4 text-white">{data?.name}</h2>
-                <Badge variant={badgeVariant} className="mt-2">{data?.status}</Badge>
+                <Badge variant={badgeVariant} className="mt-2 rounded-full">{data?.status}</Badge>
               </div>
 
               <Separator className="bg-gray-800" />
@@ -191,7 +191,7 @@ const AptPage = () => {
               <div className="space-y-2 text-sm">
                 <div className="grid grid-cols-2 gap-2">
                   <span className="text-gray-400">Threat level:</span>
-                  <Badge variant={threatLevelBadge} className="w-fit">{data?.threatLevel}</Badge>
+                  <Badge variant={threatLevelBadge} className="w-fit rounded-full">{data?.threatLevel}</Badge>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <span className="text-gray-400">Date Discovered:</span>
