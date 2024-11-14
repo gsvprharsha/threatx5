@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/gsvprharsha/threatx5"><img src="https://github.com/gsvprharsha/threatx5/blob/main/public/images/threatx5/hero.png" alt="Threat X5" width="1200" height="250"></a>
+  <a href="https://github.com/gsvprharsha/threatx5"><img src="https://github.com/gsvprharsha/threatx5/blob/main/public/images/threatx5/hero.png" alt="Threat X5" width="1000" height="250"></a>
   <br>
   Threat X5
   <br>
@@ -26,7 +26,13 @@
 **Threat X5 is a powerful tool for anyone seeking insights into global cyber threats, allowing for effective searches by regions, industries, or specific attack characteristics. It aims to be an educational and practical resource for a deeper understanding of cyber threat intelligence.**
 
 # Screenshot
-![Image](https://github.com/gsvprharsha/threatx5/blob/main/public/images/threatx5/screenshot.png)
+<h1 align="center">
+  <br>
+  <a href="https://threatx5.vercel.app"><img src="https://github.com/gsvprharsha/threatx5/blob/main/public/images/threatx5/screenshot.png" alt="Threat X5" width="666" height="375"></a>
+  <br>
+  Threat X5
+  <br>
+</h1>
 
 
 After running these commands, Threat X5 will be accessible at `localhost:3000`.
