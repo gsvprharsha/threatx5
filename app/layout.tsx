@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   icons: '/images/threatx5/icon.png'
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{

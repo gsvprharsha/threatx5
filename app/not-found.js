@@ -16,6 +16,7 @@ export default function NotFound() {
               height={32}
               className="mr-4"
             />
+
             <div className="text-2xl font-bold tracking-tight">
               <Link href="/">Threat X5</Link>
             </div>

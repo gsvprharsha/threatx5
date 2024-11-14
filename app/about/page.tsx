@@ -4,6 +4,7 @@ import React from 'react';
 import { Github } from 'lucide-react';
 import Image from 'next/image';
 
+
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-[#0f0f10] text-white">

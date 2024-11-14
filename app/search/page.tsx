@@ -8,6 +8,7 @@ import Loading from '@/components/ui/loading';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 const SearchPage = () => {
   const [exactResult, setExactResult] = useState<{ name: string; description: string; category: string } | null>(null);
   const [otherResults, setOtherResults] = useState<{ name: string; description: string; category: string }[]>([]);

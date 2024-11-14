@@ -8,6 +8,7 @@ if (!supabaseUrl || !supabaseKey) {
   throw new Error('Supabase URL or key is not defined in environment variables');
 }
 
+
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function GET(req: NextRequest) {

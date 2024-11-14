@@ -172,6 +172,7 @@ const AptPage = () => {
             </div>
           </div>
           
+
           <div className="h-screen overflow-hidden sticky top-[50px] z-20 p-6 max-h-[calc(100vh-64px)]">
             <div className="space-y-6">
               <div className="flex flex-col items-center">
