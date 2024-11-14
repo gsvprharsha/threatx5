@@ -34,9 +34,6 @@
   <br>
 </h1>
 
-
-After running these commands, Threat X5 will be accessible at `localhost:3000`.
-
 # Features
 
 - **Comprehensive APT Profiles:** Access detailed profiles on APT groups, including information on their history, motives, typical targets, and attack strategies.
