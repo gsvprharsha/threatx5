@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
+
 export default function Loading() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
