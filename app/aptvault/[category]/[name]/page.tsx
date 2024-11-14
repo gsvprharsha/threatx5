@@ -177,10 +177,11 @@ const AptPage = () => {
             <div className="space-y-6">
               <div className="flex flex-col items-center">
                 <Image
-                  src="/images/threatx5/1200x1200.svg"
+                  src={data?.aptLogo ?? '/images/threatx5/1200x1200.svg'}
                   alt="Profile"
                   width={150}
                   height={150}
+                  style={{ transform: 'scale(1.2)' }}
                   className="rounded-full"
                 />
                 <h2 className="text-lg font-semibold mt-4 text-white">{data?.name}</h2>
