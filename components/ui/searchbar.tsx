@@ -5,6 +5,7 @@ import { useRef, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+
 const SearchBar = () => {
 
     const inputRef = useRef<HTMLInputElement>(null)
