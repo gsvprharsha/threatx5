@@ -34,7 +34,6 @@
 # Features
 
 - **Comprehensive APT Profiles:** Access detailed profiles on APT groups, including information on their history, motives, typical targets, and attack strategies.
-- **Advanced Search & Filtering:** Quickly find relevant APT data based on multiple criteria, such as region, industry, malware type, and more.
 - **Real-Time Updates:** Stay up-to-date with the latest APT campaigns, emerging threat actors, and new attack tactics.
 - **Educational Resources:** Includes articles, research papers, and guides to help users understand and defend against APTs.
 
