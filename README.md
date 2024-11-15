@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/gsvprharsha/threatx5"><img src="https://github.com/gsvprharsha/threatx5/blob/main/public/images/threatx5/hero.png" alt="Threat X5" width="1000" height="250"></a>
+  <a href="https://github.com/gsvprharsha/threatx5"><img src="https://github.com/gsvprharsha/threatx5/blob/main/public/images/threatx5/hero.png" alt="Threat X5" width="700" height="160"></a>
   <br>
   Threat X5
   <br>
@@ -14,8 +14,6 @@
 <b><a href="https://threatx5.vercel.app">Visit Threat X5</a></b>
 <b>&ensp;•&ensp;</b>
 <b><a href="#features">Features</a></b>
-<b>&ensp;•&ensp;</b>
-<b><a href="#">Contributions</a></b>
 <b>&ensp;•&ensp;</b>
 <b><a href="#future-goals">Future Goals</a></b>
 </p>
