@@ -25,7 +25,6 @@
 
 # Screenshot
 <h1 align="center">
-  <br>
   <a href="https://threatx5.vercel.app"><img src="https://github.com/gsvprharsha/threatx5/blob/main/public/images/threatx5/screenshot.png" alt="Threat X5" width="666" height="375"></a>
 </h1>
 
