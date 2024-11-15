@@ -38,7 +38,7 @@
 # Future Goals
 The roadmap for Threat X5 includes:
 
-- Contribute to create the Project Wiki
+- Create the Project Wiki
 - Adding a community-driven feedback and review system to improve data accuracy.
 - Extending the database to cover more malware and APT families and regions.
 - Implementing advanced data visualization features for APT activity over time.
