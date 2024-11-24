@@ -58,11 +58,11 @@ export default function Home() {
           height={120}
         />
       </div>
-      <h1 className="text-white text-5xl font-bold mb-2">
+      <h1 className="text-white text-5xl font-bold mb-2 text-center">
         Discover Every APT
       </h1>
 
-      <p className="text-gray-400 font-medium text-lg mb-4">
+      <p className="text-gray-400 font-medium text-lg mb-4 text-center">
         Unlock comprehensive intelligence and detailed profiles on global APTs.
       </p>
 
