@@ -233,9 +233,9 @@ const AptPage = () => {
                 remarkPlugins={[remarkGfm]} 
                 rehypePlugins={[rehypeRaw]}
                 components={{
-                  h1: ({ ...props }) => <h1 className="text-3xl font-bold leading-relaxed" {...props} />,
-                  h2: ({ ...props }) => <h2 className="text-2xl font-semibold leading-relaxed" {...props} />,
-                  h3: ({ ...props }) => <h3 className="text-xl font-semibold leading-relaxed" {...props} />,
+                  h1: ({ ...props }) => <h1 className="text-3xl font-bold leading-relaxed text-white" {...props} />,
+                  h2: ({ ...props }) => <h2 className="text-2xl font-semibold leading-relaxed text-white" {...props} />,
+                  h3: ({ ...props }) => <h3 className="text-xl font-semibold leading-relaxed text-white" {...props} />,
                   p: ({ ...props }) => <p className="text-sm leading-[2.0]" {...props} />,
                   ol: ({ ...props }) => <ol className="list-decimal list-inside leading-[2.0]" {...props} />
                 }}
