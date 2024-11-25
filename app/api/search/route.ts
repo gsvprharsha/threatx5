@@ -20,20 +20,31 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ message: 'No threat parameter provided' }, { status: 400 });
     }
 
+    // Handle short threat strings separately (e.g., 1-2 characters)
+    const threatLength = threat.length;
+    let queryCondition = `name.ilike.%${threat}%,description.ilike.%${threat}%`;
+
+    if (threatLength <= 2) {
+      // For short strings, do an exact match search first
+      queryCondition = `name.ilike.%${threat}%`;
+      console.log(queryCondition)
+    }
+
+    // Exact Match Query
     const { data: exactMatchData, error: exactMatchError } = await supabase
       .from('aptData')
       .select('name, description, category')
-      .ilike('name', `%${threat}%`)
-      .ilike('description', `%${threat}%`);
+      .or(queryCondition);
 
     if (exactMatchError) {
       console.error('Supabase error (exact match):', exactMatchError.message);
       return NextResponse.json({ message: exactMatchError.message }, { status: 500 });
     }
 
+    // Other Results Query
     const { data: otherResultsData, error: otherResultsError } = await supabase
       .from('aptData')
-      .select('name, description, category') 
+      .select('name, description, category')
       .limit(10);
 
     if (otherResultsError) {
@@ -41,18 +52,10 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ message: otherResultsError.message }, { status: 500 });
     }
 
-    if (!exactMatchData || exactMatchData.length === 0) {
-      console.log('No exact match found, but returning partial results');
-    }
-
-    const filteredOtherResults = otherResultsData?.filter((item) => {
-      return item.name !== exactMatchData[0]?.name;
-    });
-
-
-    if (!filteredOtherResults || filteredOtherResults.length === 0) {
-      console.log('No other results available');
-    }
+    // Filter Results
+    const filteredOtherResults = exactMatchData && exactMatchData.length > 0 
+      ? otherResultsData?.filter((item) => item.name !== exactMatchData[0]?.name)
+      : otherResultsData;
 
     const results = {
       exactMatch: exactMatchData || [],
