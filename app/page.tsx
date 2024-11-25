@@ -124,7 +124,12 @@ export default function Home() {
             Github
             <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Link>
-          
+
+          <Link href="https://github.com/gsvprharsha/threatx5/wiki" className="group flex items-center text-sm text-white hover:underline">
+            Docs
+            <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </Link>
+      
           <Link href="/about" className="group flex items-center text-sm text-white hover:underline">
             About
             <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
