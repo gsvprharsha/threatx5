@@ -36,7 +36,7 @@ export default function NotFound() {
         <p className="text-2xl mb-8 text-center">Oops! The page you&apos;re looking for doesn&apos;t exist.</p>
         <Button asChild className="bg-white text-[#0f0f10] hover:bg-gray-200">
           <Link href="/">
-            Return Home
+            Return To Home
           </Link>
         </Button>
       </main>

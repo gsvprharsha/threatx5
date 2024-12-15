@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -31,7 +32,7 @@ const AptPage = () => {
   const [markdownContent, setMarkdownContent] = useState<string>('');
   const [sections, setSections] = useState<{ section: string, subsections: string[] }[]>([]);
   const router = useRouter();
-  console.log(router)
+  console.log(router);
 
   useEffect(() => {
     if (category && name) {
@@ -46,7 +47,7 @@ const AptPage = () => {
             redirect('/404/');
           }
         } catch (err) {
-          console.log(err)
+          console.log(err);
           redirect('/404/');
         } finally {
           setLoading(false);
@@ -62,7 +63,7 @@ const AptPage = () => {
           const parsedSections = parseMarkdown(mdText);
           setSections(parsedSections);
         } catch (err) {
-          console.log(err)
+          console.log(err);
           redirect('/404/');
         }
       };
@@ -187,7 +188,7 @@ const AptPage = () => {
             <div className="text-2xl font-bold tracking-tight text-white"><Link href='/'>Threat X5</Link></div>
           </div>
           <Button className="bg-white hover:bg-[#0f0f10] text-black hover:text-white rounded-full px-6 py-2 transition-colors duration-300">
-          <Github /><a href="https://github.com/gsvprharsha/threatx5">Contribute</a>
+            <Github /><a href="https://github.com/gsvprharsha/threatx5">Contribute</a>
           </Button>
         </div>
       </header>
@@ -229,23 +230,37 @@ const AptPage = () => {
             </div>
 
             <div className="prose prose-invert max-w-none text-justify">
-              <ReactMarkdown 
-                remarkPlugins={[remarkGfm]} 
-                rehypePlugins={[rehypeRaw]}
-                components={{
-                  h1: ({ ...props }) => <h1 className="text-3xl font-bold leading-relaxed text-white" {...props} />,
-                  h2: ({ ...props }) => <h2 className="text-2xl font-semibold leading-relaxed text-white" {...props} />,
-                  h3: ({ ...props }) => <h3 className="text-xl font-semibold leading-relaxed text-white" {...props} />,
-                  p: ({ ...props }) => <p className="text-sm leading-[2.0]" {...props} />,
-                  ol: ({ ...props }) => <ol className="list-decimal list-inside leading-[2.0]" {...props} />
-                }}
-              >
-                {markdownContent}
-              </ReactMarkdown>
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]} 
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                h1: ({ ...props }) => <h1 className="text-3xl font-bold leading-relaxed text-white" {...props} />,
+                h2: ({ ...props }) => <h2 className="text-2xl font-semibold leading-relaxed text-white" {...props} />,
+                h3: ({ ...props }) => <h3 className="text-xl font-semibold leading-relaxed text-white" {...props} />,
+                p: ({ ...props }) => <p className="text-sm leading-[2.0]" {...props} />,
+                ol: ({ ...props }) => <ol className="list-decimal list-inside leading-[2.0]" {...props} />,
+                em: ({ ...props }) => <em className="italic text-white" {...props} />,
+                code: ({ children }) => (
+                  <span className="bg-[#1a1a1a] text-white rounded-md px-2 py-1 italic">{children}</span>
+                ),
+                li: ({ children }) => (
+                  <li className="pl-5 text-sm list-inside leading-[2.0] break-words"> {/* Add left padding for tab space */}
+                    {children}  
+                  </li>
+                ),
+                ul: ({ children }) => (
+                  <ul className="pl-5 text-sm list-inside leading-[2.0] break-words"> {/* Add left padding for tab space */}
+                    {children}  
+                  </ul>
+                ),
+
+              }}
+            >
+              {markdownContent}
+            </ReactMarkdown>
             </div>
           </div>
           
-          {/* Desktop Sidebar - Hidden on mobile, visible on desktop */}
           <div className="hidden lg:block h-screen overflow-hidden sticky top-[50px] z-20 p-6 max-h-[calc(100vh-64px)]">
             <SidebarContent />
           </div>

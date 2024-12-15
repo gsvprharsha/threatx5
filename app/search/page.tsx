@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation';
 import Loading from '@/components/ui/loading';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useToast } from "@/hooks/use-toast";
 
 
 const SearchPage = () => {
@@ -15,13 +16,16 @@ const SearchPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isLinkLoading, setIsLinkLoading] = useState(false);
+  const { toast } = useToast()
 
   useEffect(() => {
     const searchQuery = new URLSearchParams(window.location.search).get('threat');
     if (searchQuery) {
       fetchResults(searchQuery);
     } else {
+      localStorage.setItem('showNoSearchToast', 'true');
       redirect('/');
+      
     }
   }, []);
 

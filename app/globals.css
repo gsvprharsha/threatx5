@@ -6,7 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -63,11 +62,45 @@ body {
   }
 }
 
+.image-caption {
+  text-align: center; /* Centers the caption */
+  margin-bottom: 20px; /* Adds space between the image and caption */
+}
+
+.image-caption img {
+  display: block; /* Removes space below the image */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.image-caption figcaption {
+  margin-top: 10px; /* Adds space between the image and caption */
+  font-style: italic; /* Optional: Adds a styling effect to the caption */
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* New styles for mobile-friendly table */
+.table-container {
+  overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+}
+
+.table-container table {
+  min-width: 600px; /* Ensures the table doesn't collapse on small screens */
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    padding-left: 1rem;
+    padding-right: 1rem; /* Reduces padding on smaller screens */
+  }
+  .table-container table {
+    font-size: 0.875rem; /* Reduces font size slightly for better fit */
   }
 }

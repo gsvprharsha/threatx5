@@ -2,14 +2,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRightCircle, Info, Loader2 } from "lucide-react";
+import { ArrowRightCircle, Info, Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github } from 'lucide-react';
 import Link from "next/link"; 
 import { useRef, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
-
+import { NoSearchToast } from "@/components/ui/noSearchToast";
 
 interface BadgeType {
   text: string;
@@ -50,6 +50,7 @@ export default function Home() {
 
   return (
     <div className="dark min-h-screen flex flex-col items-center justify-center px-6 bg-[#0f0f10]">
+      <NoSearchToast />
       <div className="mb-4">
         <Image
           src="/images/threatx5/hero.png"
@@ -71,7 +72,7 @@ export default function Home() {
         <Input
             type="text"
             disabled={isSearching}
-            ref = {inputRef}
+            ref={inputRef}
             value={threat}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => {
@@ -87,7 +88,7 @@ export default function Home() {
             aria-label="Search APT"
         />
         <div className="flex items-center gap-2">
-            <Button disabled={ isSearching } onClick={ searchThreat } variant="default" size="icon" className="rounded-full">
+            <Button disabled={isSearching} onClick={searchThreat} variant="default" size="icon" className="rounded-full">
             {isSearching ? <Loader2 className="h-4 w-4 animate-spin"/> : <ArrowRightCircle className="h-4 w-4" />}
             </Button>
         </div>
@@ -118,8 +119,8 @@ export default function Home() {
         </Button>
       </div>
 
-      <div className="absolute bottom-4 w-full text-center">
-        <div className="flex justify-center space-x-12">          
+      <div className="absolute bottom-4 w-full px-4">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-8">          
           <Link href="https://github.com/gsvprharsha/threatx5" className="group flex items-center text-sm text-white hover:underline">
             Github
             <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -129,7 +130,7 @@ export default function Home() {
             Docs
             <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Link>
-      
+
           <Link href="/about" className="group flex items-center text-sm text-white hover:underline">
             About
             <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -138,9 +139,9 @@ export default function Home() {
           <Link href="#" className="group flex items-center text-sm text-white">
             Blog (Coming soon)
           </Link>
-
         </div>
       </div>
     </div>
   );
 }
+
