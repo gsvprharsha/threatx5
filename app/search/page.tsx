@@ -17,6 +17,7 @@ const SearchPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [isLinkLoading, setIsLinkLoading] = useState(false);
   const { toast } = useToast()
+  console.log(toast) // This statement needs to be removed
 
   useEffect(() => {
     const searchQuery = new URLSearchParams(window.location.search).get('threat');
