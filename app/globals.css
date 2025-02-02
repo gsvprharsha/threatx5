@@ -104,3 +104,18 @@ body {
     font-size: 0.875rem; /* Reduces font size slightly for better fit */
   }
 }
+
+  /* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #27272a;
+  border: 2px solid #27272a;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0f0f10;
+}
